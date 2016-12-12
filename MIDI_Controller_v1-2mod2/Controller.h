@@ -4,7 +4,7 @@
 #include <Arduino.h>
 
 //***********************************************************************
-class Mux
+class Mux //
 {
   public:
     Mux(byte outpin_, byte numPins_, bool analog_);
@@ -18,7 +18,7 @@ class Button
 {
   public:
     Button(byte pin, byte command, byte value, byte channel, byte debounce);
-    Button(Mux mux, byte muxpin, byte command, byte value, byte channel, byte debounce);
+  Button(Mux mux, byte muxpin, byte command, byte value, byte channel, byte debounce);
     byte getValue();
     void muxUpdate();
     void newValue(byte command, byte value, byte channel);
@@ -47,7 +47,7 @@ class Pot
 {
   public:
     Pot(byte pin, byte command, byte control, byte channel);
-    Pot(Mux mux, byte muxpin ,byte command, byte control, byte channel);
+   Pot(Mux mux, byte muxpin ,byte command, byte control, byte channel);
     void muxUpdate();
     void newValue(byte command, byte value, byte channel);
     byte getValue();
